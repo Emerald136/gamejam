@@ -18,7 +18,8 @@ public class PlayerController : MonoBehaviour
     }
 
     void Update() 
-    {
+    {   
+        
         speedX = Input.GetAxisRaw("Horizontal") * moveSpeed;
         speedY = Input.GetAxisRaw("Vertical")*moveSpeed;
         rb.velocity = new Vector2(speedX, speedY);
@@ -26,6 +27,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Shoot();
+            print ("gggg");
         }
     }
 
