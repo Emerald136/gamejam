@@ -28,10 +28,8 @@ public class BombEnemy : MonoBehaviour
     {
         if (player == null || isExploding) return;
 
-        // Движение к игроку
         MoveTowardsPlayer();
 
-        // Проверка на близость к игроку
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
         if (distanceToPlayer <= explosionRadius)
         {
@@ -41,42 +39,30 @@ public class BombEnemy : MonoBehaviour
 
     void MoveTowardsPlayer()
     {
-        // Движение врага в направлении игрока
         Vector2 direction = (player.position - transform.position).normalized;
         transform.Translate(direction * moveSpeed * Time.deltaTime);
     }
 
     System.Collections.IEnumerator Explode()
     {
-        isExploding = true; // Запускаем процесс взрыва
-
-        // Ожидание перед взрывом
+        isExploding = true; 
         yield return new WaitForSeconds(explosionDelay);
-
-        // Проверяем, есть ли игрок в радиусе взрыва
         Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, explosionRadius, playerLayer);
         foreach (var hit in hits)
         {
             if (hit.CompareTag("Player"))
             {
-                // Наносим урон игроку (вы должны реализовать метод TakeDamage)
                 hit.GetComponent<PlayerStats>()?.TakeDamage(damage);
             }
         }
-
-        // Показываем эффект взрыва
         if (explosionEffect != null)
         {
             Instantiate(explosionEffect, transform.position, Quaternion.identity);
         }
-
-        // Уничтожаем врага
         Destroy(gameObject);
     }
-
     private void OnDrawGizmosSelected()
     {
-        // Визуализация радиуса взрыва
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, explosionRadius);
     }
