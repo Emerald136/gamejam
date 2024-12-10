@@ -19,15 +19,13 @@ public class PlayerController : MonoBehaviour
 
     void Update() 
     {   
-        
         speedX = Input.GetAxisRaw("Horizontal") * moveSpeed;
-        speedY = Input.GetAxisRaw("Vertical")*moveSpeed;
+        speedY = Input.GetAxisRaw("Vertical") * moveSpeed;
         rb.velocity = new Vector2(speedX, speedY);
 
         if (Input.GetMouseButtonDown(0))
         {
             Shoot();
-            print ("gggg");
         }
     }
 
@@ -35,11 +33,8 @@ public class PlayerController : MonoBehaviour
     {
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePosition.z = 0;
-
         GameObject ball = Instantiate(ballPrefab, muzzleTransform.position, Quaternion.identity);
-
         Vector3 direction = (mousePosition - transform.position).normalized;
-
         Rigidbody2D rb = ball.GetComponent<Rigidbody2D>();
         rb.velocity = direction * ballSpeed;
     }
