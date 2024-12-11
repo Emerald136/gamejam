@@ -19,14 +19,18 @@ public class PlayerController : MonoBehaviour
 
     void Update() 
     {   
-        speedX = Input.GetAxisRaw("Horizontal") * moveSpeed;
-        speedY = Input.GetAxisRaw("Vertical") * moveSpeed;
-        rb.velocity = new Vector2(speedX, speedY);
-
-        if (Input.GetMouseButtonDown(0))
+        if (FrozenPuddle.instance.isFrozenPuddle == false) 
         {
-            Shoot();
+            speedX = Input.GetAxisRaw("Horizontal") * moveSpeed;
+            speedY = Input.GetAxisRaw("Vertical") * moveSpeed;
+            rb.velocity = new Vector2(speedX, speedY);
+
+            if (Input.GetMouseButtonDown(0))
+            {
+                Shoot();
+            }
         }
+
     }
 
     void Shoot()
