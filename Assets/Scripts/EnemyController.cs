@@ -12,7 +12,8 @@ public class EnemyController : MonoBehaviour
     public LayerMask bulletLayer;        // Слой пуль
     public float detectionRadius = 3f;   // Радиус уклонения от пуль
     public float optimalDistance = 5f;   // Оптимальная дистанция от игрока
-
+    private AudioSource audioSource;     // Компонент AudioSource
+    public AudioClip shootSound;         // Звук выстрела
     private Transform player;            // Ссылка на игрока
     private Rigidbody2D rb;
     private float lastFireTime = 0f;
@@ -26,6 +27,7 @@ public class EnemyController : MonoBehaviour
         {
             Debug.LogError("Игрок с тегом 'Player' не найден в сцене!");
         }
+        audioSource = GetComponent<AudioSource>(); // Инициализация компонента AudioSource
     }
 
     void Update()
@@ -49,6 +51,12 @@ public class EnemyController : MonoBehaviour
         {
             Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
             lastFireTime = Time.time;
+
+            // Проигрываем звук выстрела
+            if (audioSource != null && shootSound != null)
+            {
+                audioSource.PlayOneShot(shootSound); // Воспроизведение звука
+            }
         }
     }
 
@@ -70,38 +78,37 @@ public class EnemyController : MonoBehaviour
     }
 
     void DodgeBullets()
-{
-    // Проверяем наличие пуль в радиусе
-    Collider2D[] bullets = Physics2D.OverlapCircleAll(transform.position, detectionRadius, bulletLayer);
-
-    foreach (var bullet in bullets)
     {
-        // Получаем Rigidbody2D пули
-        Rigidbody2D bulletRb = bullet.GetComponent<Rigidbody2D>();
-        if (bulletRb != null)
+        // Проверяем наличие пуль в радиусе
+        Collider2D[] bullets = Physics2D.OverlapCircleAll(transform.position, detectionRadius, bulletLayer);
+
+        foreach (var bullet in bullets)
         {
-            // Траектория движения пули
-            Vector2 bulletDirection = bulletRb.velocity.normalized;
-
-            // Определяем направление уклонения
-            Vector2 toEnemy = (transform.position - bullet.transform.position).normalized;
-
-            // Выбираем направление уклонения, перпендикулярное траектории пули
-            Vector2 dodgeDirection = Vector2.Perpendicular(bulletDirection);
-
-            // Проверяем, в какую сторону уклоняться: влево или вправо
-            if (Vector2.Dot(dodgeDirection, toEnemy) < 0)
+            // Получаем Rigidbody2D пули
+            Rigidbody2D bulletRb = bullet.GetComponent<Rigidbody2D>();
+            if (bulletRb != null)
             {
-                dodgeDirection = -dodgeDirection; // Меняем направление, если нужно
-            }
+                // Траектория движения пули
+                Vector2 bulletDirection = bulletRb.velocity.normalized;
 
-            // Применяем уклонение
-            rb.velocity = dodgeDirection * dodgeSpeed;
-            return; // Уклоняемся от одной пули за раз
+                // Определяем направление уклонения
+                Vector2 toEnemy = (transform.position - bullet.transform.position).normalized;
+
+                // Выбираем направление уклонения, перпендикулярное траектории пули
+                Vector2 dodgeDirection = Vector2.Perpendicular(bulletDirection);
+
+                // Проверяем, в какую сторону уклоняться: влево или вправо
+                if (Vector2.Dot(dodgeDirection, toEnemy) < 0)
+                {
+                    dodgeDirection = -dodgeDirection; // Меняем направление, если нужно
+                }
+
+                // Применяем уклонение
+                rb.velocity = dodgeDirection * dodgeSpeed;
+                return; // Уклоняемся от одной пули за раз
+            }
         }
     }
-}
-
 
     private void OnDrawGizmosSelected()
     {

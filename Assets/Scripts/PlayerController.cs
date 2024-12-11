@@ -11,15 +11,18 @@ public class PlayerController : MonoBehaviour
     public GameObject ballPrefab;
     public float ballSpeed = 10f;
     public Transform muzzleTransform;
+    private AudioSource audioSource;
 
-    void Start() 
+
+    void Start()
     {
-        rb=GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
+        audioSource = GetComponent<AudioSource>();
     }
 
-    void Update() 
-    {   
-        if (FrozenPuddle.instance.isFrozenPuddle == false) 
+    void Update()
+    {
+        if (FrozenPuddle.instance.isFrozenPuddle == false)
         {
             speedX = Input.GetAxisRaw("Horizontal") * moveSpeed;
             speedY = Input.GetAxisRaw("Vertical") * moveSpeed;
@@ -30,7 +33,6 @@ public class PlayerController : MonoBehaviour
                 Shoot();
             }
         }
-
     }
 
     void Shoot()
@@ -41,5 +43,11 @@ public class PlayerController : MonoBehaviour
         Vector3 direction = (mousePosition - transform.position).normalized;
         Rigidbody2D rb = ball.GetComponent<Rigidbody2D>();
         rb.velocity = direction * ballSpeed;
+
+        
+        if (audioSource != null)
+        {
+            audioSource.Play(); 
+        }
     }
 }
