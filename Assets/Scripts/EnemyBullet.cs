@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class EnemyBullet : MonoBehaviour
 {
-    public float speed = 10f;      // Скорость пули
-    public float lifetime = 5f;   // Время жизни пули
+    public float speed = 10f; 
+    public float lifetime = 5f;  
 
     void Start()
     {
-        Destroy(gameObject, lifetime); // Уничтожаем пулю через заданное время
+        Destroy(gameObject, lifetime); 
     }
 
     void Update()
@@ -25,9 +25,9 @@ public class EnemyBullet : MonoBehaviour
             PlayerStats playerStats = collision.GetComponent<PlayerStats>();
             if (playerStats != null)
             {
-                playerStats.TakeDamage(10); // Например, 10 единиц урона
+                playerStats.TakeDamage(10);
             }
-            Destroy(gameObject); // Уничтожаем пулю
+            Destroy(gameObject);
         }
     }
 }
