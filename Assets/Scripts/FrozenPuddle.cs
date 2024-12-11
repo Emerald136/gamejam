@@ -6,11 +6,12 @@ using UnityEngine;
 public class FrozenPuddle : MonoBehaviour
 {
     public static FrozenPuddle instance;
-    public bool isFrozenPuddle;
+    public bool isFrozenPuddle = false;
     private Vector2 frozenVelocity;
 
     void Awake() 
     {
+        isFrozenPuddle = false;
         instance = this;
     }
     

@@ -25,11 +25,12 @@ public class PlayerController : MonoBehaviour
             speedY = Input.GetAxisRaw("Vertical") * moveSpeed;
             rb.velocity = new Vector2(speedX, speedY);
 
-            if (Input.GetMouseButtonDown(0) && SwipeGunsModel.instance.currentGun != "")
+            if (Input.GetMouseButtonDown(0))
             {
                 Shoot();
             }
         }
+
     }
 
     void Shoot()
