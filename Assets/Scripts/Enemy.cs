@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,11 +9,15 @@ public class Enemy : MonoBehaviour
     public SpriteRenderer spriteRenderer; // Ссылка на SpriteRenderer врага
     public Color damageColor = Color.red; // Цвет, который будет при попадании
     public float flashDuration = 0.2f;    // Длительность эффекта
+    public int scoreValue = 5;            // Очки за убийство (по умолчанию 5)
 
-    private void Start() 
+    private ScoreManager scoreManager;    
+
+    private void Start()
     {
         healthBar.maxValue = 100;
         healthBar.value = health;
+
         if (spriteRenderer == null)
         {
             spriteRenderer = GetComponent<SpriteRenderer>();
@@ -23,6 +26,7 @@ public class Enemy : MonoBehaviour
                 Debug.LogError("SpriteRenderer не найден!");
             }
         }
+        scoreManager = FindObjectOfType<ScoreManager>();
     }
 
     public void TakeDamage(int damage)
@@ -30,6 +34,7 @@ public class Enemy : MonoBehaviour
         health -= damage;
         healthBar.value = health;
         StartCoroutine(FlashDamage());
+
         if (health <= 0)
         {
             Die();
@@ -67,6 +72,17 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
+        // Проверяем, является ли этот враг с бомбой
+        BombEnemy bombEnemy = GetComponent<BombEnemy>();
+        if (bombEnemy != null)
+        {
+            // Если это враг с бомбой, даем 10 очков
+            scoreValue = 10;
+        }
+        if (scoreManager != null)
+        {
+            scoreManager.AddScore(scoreValue);
+        }
         Destroy(gameObject);
     }
 }

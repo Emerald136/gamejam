@@ -5,14 +5,14 @@ using UnityEngine;
 public class BombEnemy : MonoBehaviour
 {
     public float moveSpeed = 3f;          // Скорость движения врага
-    public float explosionRadius = 2f;   // Радиус взрыва
-    public float explosionDelay = 1f;    // Задержка перед взрывом
-    public int damage = 50;           // Урон от взрыва
-    public LayerMask playerLayer;        // Слой игрока
-    public GameObject explosionEffect;   // Эффект взрыва (частицы)
-    
-    private Transform player;            // Ссылка на игрока
-    private bool isExploding = false;    // Флаг, сигнализирующий о начале взрыва
+    public float explosionRadius = 2f;    // Радиус взрыва
+    public float explosionDelay = 1f;     // Задержка перед взрывом
+    public int damage = 50;               // Урон от взрыва
+    public LayerMask playerLayer;         // Слой игрока
+    public GameObject explosionEffect;    // Эффект взрыва (частицы)
+
+    private Transform player;             // Ссылка на игрока
+    private bool isExploding = false;     // Флаг, сигнализирующий о начале взрыва
 
     void Start()
     {
@@ -45,7 +45,7 @@ public class BombEnemy : MonoBehaviour
 
     System.Collections.IEnumerator Explode()
     {
-        isExploding = true; 
+        isExploding = true;
         yield return new WaitForSeconds(explosionDelay);
         Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, explosionRadius, playerLayer);
         foreach (var hit in hits)
@@ -61,6 +61,7 @@ public class BombEnemy : MonoBehaviour
         }
         Destroy(gameObject);
     }
+
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
