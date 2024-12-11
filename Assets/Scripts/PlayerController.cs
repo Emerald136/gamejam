@@ -22,13 +22,13 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (FrozenPuddle.instance.isFrozenPuddle == false)
+        if (FrozenPuddle.instance.isFrozenPuddle == false && TrainPresenter.instance.isMovingTrain == false)
         {
             speedX = Input.GetAxisRaw("Horizontal") * moveSpeed;
             speedY = Input.GetAxisRaw("Vertical") * moveSpeed;
             rb.velocity = new Vector2(speedX, speedY);
 
-            if (Input.GetMouseButtonDown(0))
+            if (SwipeGunsModel.instance.currentGun != "" && Input.GetMouseButtonDown(0))
             {
                 Shoot();
             }
