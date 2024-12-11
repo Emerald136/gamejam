@@ -6,6 +6,7 @@ public class MouseController : MonoBehaviour
 {
     public Transform weaponHolder;
     public Transform characterSprite;
+    public Transform gunObject;
 
     void Update()
     {
@@ -21,10 +22,12 @@ public class MouseController : MonoBehaviour
         if (direction.x > 0) 
         {
             characterSprite.localScale = new Vector3(5, 5, 5);
+            weaponHolder.localScale = new Vector3(1, 1, 1);
         }
         else if (direction.x < 0) 
         {
             characterSprite.localScale = new Vector3(-5, 5, 5);
+            weaponHolder.localScale = new Vector3(1, -1, 1);
         }
     }
 }

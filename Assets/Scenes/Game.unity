@@ -228,7 +228,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &144434544
 Transform:
   m_ObjectHideFlags: 0
@@ -417,6 +417,7 @@ GameObject:
   - component: {fileID: 157338854}
   - component: {fileID: 157338853}
   - component: {fileID: 157338856}
+  - component: {fileID: 157338857}
   m_Layer: 0
   m_Name: Pistols
   m_TagString: Untagged
@@ -550,6 +551,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.24, y: 0.08}
   m_EdgeRadius: 0
+--- !u!114 &157338857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 157338852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23a377a06b864ed4d86aa7f10945745e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &161422129
 GameObject:
   m_ObjectHideFlags: 0
@@ -782,6 +795,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 1779932136}
   damageColor: {r: 1, g: 0.05694367, b: 0, a: 1}
   flashDuration: 0.3
+  scoreValue: 5
 --- !u!114 &309825903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -886,6 +900,7 @@ GameObject:
   - component: {fileID: 338677060}
   - component: {fileID: 338677059}
   - component: {fileID: 338677058}
+  - component: {fileID: 338677062}
   m_Layer: 0
   m_Name: Pistols (1)
   m_TagString: Untagged
@@ -1019,6 +1034,18 @@ Transform:
   - {fileID: 1571871352}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &338677062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 338677057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23a377a06b864ed4d86aa7f10945745e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &373043428
 GameObject:
   m_ObjectHideFlags: 0
@@ -1196,8 +1223,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 1
-  m_Children:
-  - {fileID: 1101327969}
+  m_Children: []
   m_Father: {fileID: 868412862}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &420338355
@@ -1372,7 +1398,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &554940816
 Transform:
   m_ObjectHideFlags: 0
@@ -1735,7 +1761,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &843163665
 Transform:
   m_ObjectHideFlags: 0
@@ -2155,6 +2181,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponHolder: {fileID: 984902291}
   characterSprite: {fileID: 420338354}
+  gunObject: {fileID: 0}
 --- !u!114 &868412866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2382,13 +2409,13 @@ Transform:
   m_GameObject: {fileID: 1101327968}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.19999999, y: 0.19999999, z: 0.19999999}
+  m_LocalPosition: {x: -1.2300001, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 835972926}
   - {fileID: 1996734643}
-  m_Father: {fileID: 420338354}
+  m_Father: {fileID: 1199972651}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1101327970
 MonoBehaviour:
@@ -2422,7 +2449,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1199972651
 Transform:
   m_ObjectHideFlags: 0
@@ -2436,6 +2463,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1101327969}
   - {fileID: 554940816}
   - {fileID: 843163665}
   - {fileID: 144434544}
@@ -2825,6 +2853,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   damageColor: {r: 1, g: 0, b: 0, a: 1}
   flashDuration: 0.2
+  scoreValue: 5
 --- !u!212 &1549576158
 SpriteRenderer:
   m_ObjectHideFlags: 0
