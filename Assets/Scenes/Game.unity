@@ -423,7 +423,7 @@ MonoBehaviour:
   health: 100
   healthBar: {fileID: 114467063}
   spriteRenderer: {fileID: 1779932136}
-  damageColor: {r: 1, g: 0.48986062, b: 0.4292453, a: 1}
+  damageColor: {r: 1, g: 0.05694367, b: 0, a: 1}
   flashDuration: 0.3
 --- !u!114 &309825903
 MonoBehaviour:
@@ -1497,7 +1497,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 100
+  orthographic size: 60
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
