@@ -29,9 +29,13 @@ public class SwipeGunsPresenter : MonoBehaviour
                 SwipeGunsModel.instance.currentGun = Guns.Pistols;
                 ShowGun(Guns.Pistols);
                 break;
-            case "Knife":
-                SwipeGunsModel.instance.currentGun = Guns.Knife;
-                ShowGun(Guns.Knife);
+            case "Pistolet":
+                SwipeGunsModel.instance.currentGun = Guns.Pistolet;
+                ShowGun(Guns.Pistolet);
+                break;
+            case "Drobash":
+                SwipeGunsModel.instance.currentGun = Guns.Drobash;
+                ShowGun(Guns.Drobash);
                 break;
         }
     }
@@ -74,7 +78,7 @@ public class SwipeGunsPresenter : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            SwipeGun(Guns.Knife);
+            SwipeGun(Guns.Pistolet);
         }
     }
 }

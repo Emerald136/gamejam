@@ -7,5 +7,7 @@ public class Guns : MonoBehaviour
     public static Guns instance;
 
     public static string Pistols = "Pistols";
-    public static string Knife = "Knife";
+    public static string Pistolet = "Pistolet";
+    public static string Drobash = "Drobash";
+    
 }
