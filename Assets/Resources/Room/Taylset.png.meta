@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -131,7 +131,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -152,7 +152,7 @@ TextureImporter:
         width: 18
         height: 9
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -168,12 +168,12 @@ TextureImporter:
       name: Taylset_2
       rect:
         serializedVersion: 2
-        x: 20
+        x: 18
         y: 7
-        width: 4
+        width: 6
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -194,7 +194,7 @@ TextureImporter:
         width: 18
         height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -221,8 +221,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e895de0217d96434abc03716a8f152e5
-      internalID: -1347409881
+      spriteID: 3b8864ae0fe61f04786d50bb178bf8f8
+      internalID: -1947261571
       vertices: []
       indices: 
       edges: []
@@ -242,8 +242,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 818faa6085f9f0b4c80720a69b8aaed0
-      internalID: 734422469
+      spriteID: c701966886d0d474ba00727efaaee8a3
+      internalID: 1829002844
       vertices: []
       indices: 
       edges: []
@@ -263,8 +263,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 810fbdb77ae6ba7439b0b5ee2b04ddd5
-      internalID: 951789234
+      spriteID: 3088fe253707ae34d9f590d26cd3b7f5
+      internalID: -250460989
       vertices: []
       indices: 
       edges: []
@@ -284,8 +284,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f59981ef3b91bbf4e9a63753e9c002b5
-      internalID: 1994092408
+      spriteID: 03ea361d033b59a47a4f9cf80c83abf2
+      internalID: 190973179
       vertices: []
       indices: 
       edges: []
@@ -294,7 +294,7 @@ TextureImporter:
       name: Taylset_8
       rect:
         serializedVersion: 2
-        x: 0
+        x: 32
         y: 52
         width: 16
         height: 16
@@ -305,8 +305,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6c40ddbf4dd68394bbb4aed224783361
-      internalID: 1650597463
+      spriteID: cc21e89506b9b0d47a597e6c7f9af7fe
+      internalID: 183286232
       vertices: []
       indices: 
       edges: []
@@ -326,8 +326,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dfb33e9c5f8fd3b4a9582540bc952ec6
-      internalID: 1812302629
+      spriteID: 6faa69bc473d855408fcf43158d02670
+      internalID: -583247201
       vertices: []
       indices: 
       edges: []
@@ -336,7 +336,7 @@ TextureImporter:
       name: Taylset_10
       rect:
         serializedVersion: 2
-        x: 32
+        x: 0
         y: 52
         width: 16
         height: 16
@@ -347,8 +347,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aac3aa79a48cfac4fa5d0c56702e4d45
-      internalID: -1114950468
+      spriteID: 8026e6e42d27e574184e9646ed317526
+      internalID: -1984967927
       vertices: []
       indices: 
       edges: []
@@ -366,15 +366,15 @@ TextureImporter:
     nameFileIdTable:
       Taylset_0: -614772256
       Taylset_1: -499149609
-      Taylset_10: -1114950468
+      Taylset_10: -1984967927
       Taylset_2: 235729650
       Taylset_3: -1404721652
-      Taylset_4: -1347409881
-      Taylset_5: 734422469
-      Taylset_6: 951789234
-      Taylset_7: 1994092408
-      Taylset_8: 1650597463
-      Taylset_9: 1812302629
+      Taylset_4: -1947261571
+      Taylset_5: 1829002844
+      Taylset_6: -250460989
+      Taylset_7: 190973179
+      Taylset_8: 183286232
+      Taylset_9: -583247201
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
