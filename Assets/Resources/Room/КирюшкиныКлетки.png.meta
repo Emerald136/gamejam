@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 40c4ae7234ad3d0418a3e3fb15210248
+guid: 4c8a29ff195d0fb4795cc6d70df525f9
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -69,7 +69,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 16384
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -93,146 +93,57 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Taylset_0
+      name: "\u041A\u0438\u0440\u044E\u0448\u043A\u0438\u043D\u044B\u041A\u043B\u0435\u0442\u043A\u0438_0"
       rect:
         serializedVersion: 2
         x: 0
-        y: 20
+        y: 32
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4006930e566aff04ba71a71de54ad803
-      internalID: -614772256
+      spriteID: 0a8cc94885950124290875cb7056c415
+      internalID: 2067975173
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Taylset_1
+      name: "\u041A\u0438\u0440\u044E\u0448\u043A\u0438\u043D\u044B\u041A\u043B\u0435\u0442\u043A\u0438_1"
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccb8959c0fc5bce458d42bb4a78ad460
+      internalID: -671819745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u041A\u0438\u0440\u044E\u0448\u043A\u0438\u043D\u044B\u041A\u043B\u0435\u0442\u043A\u0438_2"
       rect:
         serializedVersion: 2
         x: 0
-        y: 8
-        width: 18
-        height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fed9a4d142cdf0244a9f61c54a8321e3
-      internalID: -499149609
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Taylset_2
-      rect:
-        serializedVersion: 2
-        x: 18
-        y: 7
-        width: 6
-        height: 10
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: adab0c4d77fdaf745b2fa2956f6671b6
-      internalID: 235729650
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Taylset_3
-      rect:
-        serializedVersion: 2
-        x: 25
         y: 0
-        width: 18
-        height: 18
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 89a0ae4fd12e606408f015ee169d0fb6
-      internalID: -1404721652
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Taylset_4
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 20
-        width: 16
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3b8864ae0fe61f04786d50bb178bf8f8
-      internalID: -1947261571
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Taylset_5
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 68
         width: 16
         height: 16
       alignment: 0
@@ -242,39 +153,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c701966886d0d474ba00727efaaee8a3
-      internalID: 1829002844
+      spriteID: 29745cf14ce90f54d838f6db3e188f71
+      internalID: 990296572
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Taylset_6
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 68
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3088fe253707ae34d9f590d26cd3b7f5
-      internalID: -250460989
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Taylset_7
+      name: "\u041A\u0438\u0440\u044E\u0448\u043A\u0438\u043D\u044B\u041A\u043B\u0435\u0442\u043A\u0438_3"
       rect:
         serializedVersion: 2
         x: 32
-        y: 68
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -284,60 +174,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 03ea361d033b59a47a4f9cf80c83abf2
-      internalID: 190973179
+      spriteID: 052eda68b442d4d4ea5fe43e567e9724
+      internalID: -1239282920
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Taylset_8
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 52
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cc21e89506b9b0d47a597e6c7f9af7fe
-      internalID: 183286232
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Taylset_9
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 52
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6faa69bc473d855408fcf43158d02670
-      internalID: -583247201
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Taylset_10
+      name: "\u041A\u0438\u0440\u044E\u0448\u043A\u0438\u043D\u044B\u041A\u043B\u0435\u0442\u043A\u0438_4"
       rect:
         serializedVersion: 2
         x: 0
-        y: 52
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -347,8 +195,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8026e6e42d27e574184e9646ed317526
-      internalID: -1984967927
+      spriteID: 2667148999479814fb94d8a6f237c6b5
+      internalID: 440150775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u041A\u0438\u0440\u044E\u0448\u043A\u0438\u043D\u044B\u041A\u043B\u0435\u0442\u043A\u0438_5"
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d01cc6bc4aa9cc4fba78060556fe480
+      internalID: 1649590101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u041A\u0438\u0440\u044E\u0448\u043A\u0438\u043D\u044B\u041A\u043B\u0435\u0442\u043A\u0438_6"
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31004e51772801040a7653502d831a42
+      internalID: -2035325710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u041A\u0438\u0440\u044E\u0448\u043A\u0438\u043D\u044B\u041A\u043B\u0435\u0442\u043A\u0438_7"
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8c51e5bbbea7df4a9bc9d60478cf969
+      internalID: 259194905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u041A\u0438\u0440\u044E\u0448\u043A\u0438\u043D\u044B\u041A\u043B\u0435\u0442\u043A\u0438_8"
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5df62b3bbce249042a3fe4b383ac38db
+      internalID: -559197816
       vertices: []
       indices: 
       edges: []
@@ -364,17 +296,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Taylset_0: -614772256
-      Taylset_1: -499149609
-      Taylset_10: -1984967927
-      Taylset_2: 235729650
-      Taylset_3: -1404721652
-      Taylset_4: -1947261571
-      Taylset_5: 1829002844
-      Taylset_6: -250460989
-      Taylset_7: 190973179
-      Taylset_8: 183286232
-      Taylset_9: -583247201
+      "\u041A\u0438\u0440\u044E\u0448\u043A\u0438\u043D\u044B\u041A\u043B\u0435\u0442\u043A\u0438_0": 2067975173
+      "\u041A\u0438\u0440\u044E\u0448\u043A\u0438\u043D\u044B\u041A\u043B\u0435\u0442\u043A\u0438_1": -671819745
+      "\u041A\u0438\u0440\u044E\u0448\u043A\u0438\u043D\u044B\u041A\u043B\u0435\u0442\u043A\u0438_2": 990296572
+      "\u041A\u0438\u0440\u044E\u0448\u043A\u0438\u043D\u044B\u041A\u043B\u0435\u0442\u043A\u0438_3": -1239282920
+      "\u041A\u0438\u0440\u044E\u0448\u043A\u0438\u043D\u044B\u041A\u043B\u0435\u0442\u043A\u0438_4": 440150775
+      "\u041A\u0438\u0440\u044E\u0448\u043A\u0438\u043D\u044B\u041A\u043B\u0435\u0442\u043A\u0438_5": 1649590101
+      "\u041A\u0438\u0440\u044E\u0448\u043A\u0438\u043D\u044B\u041A\u043B\u0435\u0442\u043A\u0438_6": -2035325710
+      "\u041A\u0438\u0440\u044E\u0448\u043A\u0438\u043D\u044B\u041A\u043B\u0435\u0442\u043A\u0438_7": 259194905
+      "\u041A\u0438\u0440\u044E\u0448\u043A\u0438\u043D\u044B\u041A\u043B\u0435\u0442\u043A\u0438_8": -559197816
+      "\u041A\u0438\u0440\u044E\u0448\u043A\u0438\u043D\u044B\u041A\u043B\u0435\u0442\u043A\u0438_9": -746226063
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
