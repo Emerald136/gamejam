@@ -14,9 +14,11 @@ public class BombEnemy : MonoBehaviour
     private Transform player;             // Ссылка на игрока
     private bool isExploding = false;     // Флаг, сигнализирующий о начале взрыва
     public Animator animator; // Ссылка на Animator
+    private AddRoom room;
 
     void Start()
     {
+        room = GetComponentInParent<AddRoom>();
         player = GameObject.FindWithTag("Player").transform;
 
         if (player == null)
@@ -60,6 +62,7 @@ public class BombEnemy : MonoBehaviour
         {
             Instantiate(explosionEffect, transform.position, Quaternion.identity);
         }
+        room.enemies.Remove(gameObject);
         Destroy(gameObject);
     }
 

@@ -51,14 +51,18 @@ public class AddRoom : MonoBehaviour
     public void DestroyWalls() 
     {
         Debug.Log("DestroyWalls");
-        foreach(GameObject wall in walls) 
-        {
-            if (wall != null) 
-            {
-                Debug.Log("DestroyWalls2");
-                Destroy(wall);
-                Instantiate(wallEffect, wall.transform.position, Quaternion.identity);
-            }
-        }
+        foreach (GameObject wall in walls)
+{
+    if (wall != null) 
+    {
+        Debug.Log("DestroyWalls2");
+        Instantiate(wallEffect, wall.transform.position, Quaternion.identity);
+        Destroy(wall);
+    }
+    else
+    {
+        Debug.LogWarning("Один из объектов стены равен null!");
+    }
+}
     }
 }
