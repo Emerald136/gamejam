@@ -20,6 +20,7 @@ public class Enemy : MonoBehaviour
 
     public BombEnemy bombEnemyScript;
     public EnemyController enemyController;
+    public BossController bossController;
 
     private void Start()
     {
@@ -122,6 +123,7 @@ public class Enemy : MonoBehaviour
         }
         if(bombEnemyScript != null) bombEnemyScript.enabled = false;
         if(enemyController != null) enemyController.enabled = false;
+        if(bossController != null) bossController.enabled = false;
 
         bool isAnim = false;
         try

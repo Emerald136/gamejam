@@ -26,8 +26,8 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (FrozenPuddle.instance.isFrozenPuddle == false && TrainPresenter.instance.isMovingTrain == false)
-        {
+        // if (FrozenPuddle.instance.isFrozenPuddle == false && TrainPresenter.instance.isMovingTrain == false)
+        // {
             speedX = Input.GetAxisRaw("Horizontal") * moveSpeed;
             speedY = Input.GetAxisRaw("Vertical") * moveSpeed;
             rb.velocity = new Vector2(speedX, speedY);
@@ -54,7 +54,7 @@ public class PlayerController : MonoBehaviour
             {
                 rifle.StopFiring();
             }
-        }
+        // }
     }
 
     void Shoot(string currentGun)
