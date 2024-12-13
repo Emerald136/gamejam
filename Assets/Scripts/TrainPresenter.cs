@@ -210,7 +210,7 @@ public class TrainPresenter : MonoBehaviour
 
         initialColor.a = lastZatemnenie;
         TrainViewTwo.instance.blackBackground.color = initialColor;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void StopCurrutines() 
