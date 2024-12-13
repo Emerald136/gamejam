@@ -6128,6 +6128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42ba418397122b14cbe78a87a2a59965, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentGunInstance: {fileID: 0}
   currentGun: 
   currentSprite: {fileID: 0}
 --- !u!1 &420338353
@@ -7023,6 +7024,7 @@ GameObject:
   m_Component:
   - component: {fileID: 835972926}
   - component: {fileID: 835972927}
+  - component: {fileID: 835972928}
   m_Layer: 0
   m_Name: Pistols
   m_TagString: Untagged
@@ -7097,6 +7099,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &835972928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 835972925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60993f0379de3374884c4a6263c74336, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireRate: 5
+  bulletPrefab: {fileID: 576879217826615245, guid: 4a176fe502047914bb0d8df300c5f03b, type: 3}
+  muzzleTransform: {fileID: 727390368}
+  bulletSpeed: 150
 --- !u!1 &843163664
 GameObject:
   m_ObjectHideFlags: 0
@@ -7359,7 +7377,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 100
-  ballPrefab: {fileID: 576879217826615245, guid: 4a176fe502047914bb0d8df300c5f03b, type: 3}
+  bulletPrefabDrobash: {fileID: 576879217826615245, guid: 732489bfc30ff474ab9e75c69c1bc3b4, type: 3}
+  bulletPrefabPistols: {fileID: 576879217826615245, guid: 4a176fe502047914bb0d8df300c5f03b, type: 3}
+  bulletPrefabPistolet: {fileID: 576879217826615245, guid: ed951a8df7004b547b9c60099661e013, type: 3}
   ballSpeed: 100
   muzzleTransform: {fileID: 727390368}
   animator: {fileID: 420338356}
@@ -15156,6 +15176,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1332700104}
   - component: {fileID: 1332700105}
+  - component: {fileID: 1332700106}
   m_Layer: 0
   m_Name: Drobash
   m_TagString: Untagged
@@ -15230,6 +15251,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!114 &1332700106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1332700103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d09bbffdc7a0f8b4c8d96d15df04fe68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireRate: 1.4
+  bulletPrefab: {fileID: 576879217826615245, guid: 732489bfc30ff474ab9e75c69c1bc3b4, type: 3}
+  muzzleTransform: {fileID: 727390368}
+  bulletSpeed: 150
+  pelletsCount: 5
+  spreadAngle: 30
 --- !u!1 &1341310250
 GameObject:
   m_ObjectHideFlags: 0
@@ -45168,6 +45207,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1996734643}
   - component: {fileID: 1996734644}
+  - component: {fileID: 1996734645}
   m_Layer: 0
   m_Name: Pistolet
   m_TagString: Untagged
@@ -45242,6 +45282,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1996734645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1996734642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60993f0379de3374884c4a6263c74336, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireRate: 3
+  bulletPrefab: {fileID: 576879217826615245, guid: ed951a8df7004b547b9c60099661e013, type: 3}
+  muzzleTransform: {fileID: 727390368}
+  bulletSpeed: 150
 --- !u!1 &2017869449
 GameObject:
   m_ObjectHideFlags: 0
