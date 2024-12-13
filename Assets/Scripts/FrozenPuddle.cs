@@ -50,7 +50,6 @@ public class FrozenPuddle : MonoBehaviour
             Rigidbody2D rb = other.GetComponent<Rigidbody2D>();
             if (rb != null)
             {
-                rb.freezeRotation = false;
                 rb.velocity = Vector2.zero;
             }
         }
