@@ -136,6 +136,7 @@ public class Enemy : MonoBehaviour
         }
         if(isAnim) yield return new WaitForSeconds(2f);
         room.enemies.Remove(gameObject);
+        Debug.Log("ОСЧТАЛОСЬ ВРАГОВ: " + room.enemies.Count);
         Destroy(gameObject);
     }
 }
