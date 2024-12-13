@@ -15,6 +15,7 @@ public class Enemy : MonoBehaviour
     private GameObject currentShieldInstance; // Ссылка на текущий щит
 
     private ScoreManager scoreManager;    
+    private AddRoom room;
     public Animator animator;
 
     public BombEnemy bombEnemyScript;
@@ -38,6 +39,7 @@ public class Enemy : MonoBehaviour
             }
         }
         scoreManager = FindObjectOfType<ScoreManager>();
+        room = GetComponentInParent<AddRoom>();
     }
 
     public void TakeDamage(int damage)
@@ -106,7 +108,8 @@ public class Enemy : MonoBehaviour
 
     IEnumerator Die()
     {
-        // Проверяем, является ли этот враг с бомбой
+        Debug.Log("sdox");
+        //Проверяем, является ли этот враг с бомбой
         BombEnemy bombEnemy = GetComponent<BombEnemy>();
         if (bombEnemy != null)
         {
@@ -117,7 +120,6 @@ public class Enemy : MonoBehaviour
         {
             scoreManager.AddScore(scoreValue);
         }
-
         if(bombEnemyScript != null) bombEnemyScript.enabled = false;
         if(enemyController != null) enemyController.enabled = false;
 
@@ -133,6 +135,7 @@ public class Enemy : MonoBehaviour
             isAnim = false;
         }
         if(isAnim) yield return new WaitForSeconds(2f);
+        room.enemies.Remove(gameObject);
         Destroy(gameObject);
     }
 }
