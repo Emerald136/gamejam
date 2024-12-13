@@ -14,4 +14,15 @@ public class SwipeGunsModel : MonoBehaviour
     {
         instance = this;
     }
+
+    private void Start() 
+    {
+        SwipeGunsPresenter.instance.SwipeGun(PlayerPrefs.GetString("currentGame"));
+    }
+
+    public void SaveCurrentGun() 
+    {
+        PlayerPrefs.SetString("currentGame", currentGun);
+        PlayerPrefs.Save();
+    }
 }

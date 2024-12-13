@@ -210,6 +210,7 @@ public class TrainPresenter : MonoBehaviour
 
         initialColor.a = lastZatemnenie;
         TrainViewTwo.instance.blackBackground.color = initialColor;
+        SwipeGunsModel.instance.SaveCurrentGun();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 

@@ -22,22 +22,22 @@ public class SwipeGunsPresenter : MonoBehaviour
     {
         SpecificSprite(gun);
         SwipeGunsModel.instance.currentSprite = specificSprite;
-        // GunsDontView();
-        // switch (gun) 
-        // {
-        //     case "Pistols":
-        //         SwipeGunsModel.instance.currentGun = Guns.Pistols;
-        //         ShowGun(Guns.Pistols);
-        //         break;
-        //     case "Pistolet":
-        //         SwipeGunsModel.instance.currentGun = Guns.Pistolet;
-        //         ShowGun(Guns.Pistolet);
-        //         break;
-        //     case "Drobash":
-        //         SwipeGunsModel.instance.currentGun = Guns.Drobash;
-        //         ShowGun(Guns.Drobash);
-        //         break;
-        // }
+        GunsDontView();
+        switch (gun) 
+        {
+            case "Pistols":
+                SwipeGunsModel.instance.currentGun = Guns.Pistols;
+                ShowGun(Guns.Pistols);
+                break;
+            case "Pistolet":
+                SwipeGunsModel.instance.currentGun = Guns.Pistolet;
+                ShowGun(Guns.Pistolet);
+                break;
+            case "Drobash":
+                SwipeGunsModel.instance.currentGun = Guns.Drobash;
+                ShowGun(Guns.Drobash);
+                break;
+        }
         GunsDontView();
         for (int i = 0; i < SwipeGunsView.instance.Guns.Length; i++)
         {
