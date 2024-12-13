@@ -13,6 +13,7 @@ public class BombEnemy : MonoBehaviour
 
     private Transform player;             // Ссылка на игрока
     private bool isExploding = false;     // Флаг, сигнализирующий о начале взрыва
+    public Animator animator; // Ссылка на Animator
 
     void Start()
     {

@@ -11,12 +11,13 @@ public class EnemyController : MonoBehaviour
     public Transform firePoint;          // Точка стрельбы
     public LayerMask bulletLayer;        // Слой пуль
     public float detectionRadius = 3f;   // Радиус уклонения от пуль
-    public float optimalDistance = 5f;   // Оптимальная дистанция от игрока
+    public float optimalDistance = 30f;   // Оптимальная дистанция от игрока
     private AudioSource audioSource;     // Компонент AudioSource
     public AudioClip shootSound;         // Звук выстрела
     private Transform player;            // Ссылка на игрока
     private Rigidbody2D rb;
     private float lastFireTime = 0f;
+    public Animator animator; // Ссылка на Animator
 
     void Start()
     {
@@ -27,7 +28,7 @@ public class EnemyController : MonoBehaviour
         {
             Debug.LogError("Игрок с тегом 'Player' не найден в сцене!");
         }
-        audioSource = GetComponent<AudioSource>(); // Инициализация компонента AudioSource
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -37,6 +38,11 @@ public class EnemyController : MonoBehaviour
         AimAndShoot();
         MoveTowardsPlayer();
         DodgeBullets();
+        // Определяем текущую скорость врага
+        float speed = rb.velocity.magnitude;
+
+        // Обновляем параметр Animator
+        animator.SetBool("IsMoving", speed > 0.1f);
     }
 
     void AimAndShoot()

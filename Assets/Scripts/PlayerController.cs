@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     public float ballSpeed = 10f;
     public Transform muzzleTransform;
     private AudioSource audioSource;
+    public Animator animator;
 
 
     void Start()
@@ -27,6 +28,9 @@ public class PlayerController : MonoBehaviour
             speedX = Input.GetAxisRaw("Horizontal") * moveSpeed;
             speedY = Input.GetAxisRaw("Vertical") * moveSpeed;
             rb.velocity = new Vector2(speedX, speedY);
+            float speed = rb.velocity.magnitude;
+
+            animator.SetBool("isMoving", speed > 0.1f);
 
             if (SwipeGunsModel.instance.currentGun != "" && Input.GetMouseButtonDown(0))
             {
