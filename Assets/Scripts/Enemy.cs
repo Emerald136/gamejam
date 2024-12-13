@@ -10,13 +10,25 @@ public class Enemy : MonoBehaviour
     public Color damageColor = Color.red; // Цвет, который будет при попадании
     public float flashDuration = 0.2f;    // Длительность эффекта
     public int scoreValue = 5;            // Очки за убийство (по умолчанию 5)
+    public bool hasShield = false; // Указывает, есть ли щит
+    public GameObject shieldPrefab;           // Префаб щита
+    private GameObject currentShieldInstance; // Ссылка на текущий щит
 
     private ScoreManager scoreManager;    
+    private AddRoom room;
+    public Animator animator;
+
+    public BombEnemy bombEnemyScript;
+    public EnemyController enemyController;
 
     private void Start()
     {
-        healthBar.maxValue = 100;
-        healthBar.value = health;
+        if(healthBar!=null)
+        {
+            healthBar.maxValue = 100;
+            healthBar.value = health;
+        }
+        
 
         if (spriteRenderer == null)
         {
@@ -27,24 +39,48 @@ public class Enemy : MonoBehaviour
             }
         }
         scoreManager = FindObjectOfType<ScoreManager>();
+        room = GetComponentInParent<AddRoom>();
     }
 
     public void TakeDamage(int damage)
     {
         health -= damage;
-        healthBar.value = health;
+        if(healthBar!=null) healthBar.value = health;
         StartCoroutine(FlashDamage());
 
         if (health <= 0)
         {
-            Die();
+            StartCoroutine(Die());
+        }
+    }
+
+    public void ApplyShield()
+    {
+        if (!hasShield && shieldPrefab != null)
+        {
+            hasShield = true;
+            // Спавн щита
+            currentShieldInstance = Instantiate(shieldPrefab, transform.position, Quaternion.identity, transform);
+        }
+    }
+
+    public void RemoveShield()
+    {
+        if (hasShield)
+        {
+            hasShield = false;
+            // Уничтожаем щит
+            if (currentShieldInstance != null)
+            {
+                Destroy(currentShieldInstance);
+            }
         }
     }
 
     IEnumerator FlashDamage()
     {
         // Сохраняем исходный цвет
-        Color originalColor = spriteRenderer.color;
+        Color originalColor = Color.white;
 
         float elapsedTime = 0f;
         float halfDuration = flashDuration / 2f;
@@ -70,9 +106,10 @@ public class Enemy : MonoBehaviour
         spriteRenderer.color = originalColor;
     }
 
-    void Die()
+    IEnumerator Die()
     {
-        // Проверяем, является ли этот враг с бомбой
+        Debug.Log("sdox");
+        //Проверяем, является ли этот враг с бомбой
         BombEnemy bombEnemy = GetComponent<BombEnemy>();
         if (bombEnemy != null)
         {
@@ -83,6 +120,22 @@ public class Enemy : MonoBehaviour
         {
             scoreManager.AddScore(scoreValue);
         }
+        if(bombEnemyScript != null) bombEnemyScript.enabled = false;
+        if(enemyController != null) enemyController.enabled = false;
+
+        bool isAnim = false;
+        try
+        {
+            animator.GetBool("Die");
+            animator.SetBool("Die", true);
+            isAnim = true;
+        }
+        catch
+        {
+            isAnim = false;
+        }
+        if(isAnim) yield return new WaitForSeconds(2f);
+        room.enemies.Remove(gameObject);
         Destroy(gameObject);
     }
 }
