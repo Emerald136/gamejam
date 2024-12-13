@@ -79,16 +79,4 @@ public class SwipeGunsPresenter : MonoBehaviour
             SwipeGunsView.instance.Guns[i].SetActive(false);
         }
     }
-
-    void Update() 
-    {
-        if (Input.GetKeyDown(KeyCode.Alpha1)) 
-        {
-            SwipeGun(Guns.Pistols);
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            SwipeGun(Guns.Pistolet);
-        }
-    }
 }

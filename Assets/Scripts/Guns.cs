@@ -9,5 +9,6 @@ public class Guns : MonoBehaviour
     public static string Pistols = "Pistols";
     public static string Pistolet = "Pistolet";
     public static string Drobash = "Drobash";
+    public static string Avtomat = "Avtomat";
     
 }
